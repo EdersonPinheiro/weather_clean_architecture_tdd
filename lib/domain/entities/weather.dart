@@ -4,7 +4,7 @@ class WeatherEntity extends Equatable {
   final String cityName;
   final String main;
   final String description;
-  final String inCode;
+  final String iconCode;
   final double temperature;
   final int pressure;
   final int humidity;
@@ -13,7 +13,7 @@ class WeatherEntity extends Equatable {
       {required this.cityName,
       required this.main,
       required this.description,
-      required this.inCode,
+      required this.iconCode,
       required this.temperature,
       required this.pressure,
       required this.humidity});
@@ -24,7 +24,7 @@ class WeatherEntity extends Equatable {
         cityName,
         main,
         description,
-        inCode,
+        iconCode,
         temperature,
         pressure,
         humidity,
