@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:weather_clean_architecture_tdd/data/models/weather_models.dart';
 import 'package:weather_clean_architecture_tdd/domain/entities/weather.dart';
 import '../../helpers/dummy_data/json_reader.dart';
