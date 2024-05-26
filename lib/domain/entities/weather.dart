@@ -19,7 +19,6 @@ class WeatherEntity extends Equatable {
       required this.humidity});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
         cityName,
         main,

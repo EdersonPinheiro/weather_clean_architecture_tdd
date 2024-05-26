@@ -16,7 +16,7 @@ class WeatherRepositoryImpl extends WeatherRepository {
       String cityName) async {
     try {
       final result = await weatherRemoteDataSource.getCurrentWeather(cityName);
-      return Right(result);
+      return Right(result.toEntity());
     } on ServerException {
       return const Left(ServerFailure('An error has occurred'));
     } on SocketException {
