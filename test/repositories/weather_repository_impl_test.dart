@@ -5,10 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:weather_clean_architecture_tdd/core/error/exception.dart';
 import 'package:weather_clean_architecture_tdd/core/error/failure.dart';
-import 'package:weather_clean_architecture_tdd/data/models/weather_models.dart';
 import 'package:weather_clean_architecture_tdd/data/repositories/weather_repository_impl.dart';
-import 'package:weather_clean_architecture_tdd/domain/entities/weather.dart';
-
+import '../helpers/dummy_data/dummy_models.dart';
 import '../helpers/teste_relper.mocks.dart';
 
 void main() {
@@ -20,28 +18,6 @@ void main() {
     weatherRepositoryImpl = WeatherRepositoryImpl(
         weatherRemoteDataSource: mockWeatherRemoteDataSource);
   });
-
-  const testWeatherModel = WeatherModel(
-    cityName: 'New York',
-    main: 'Clear',
-    description: 'clear sky',
-    iconCode: '01n',
-    temperature: 292.87,
-    pressure: 1012,
-    humidity: 70,
-  );
-
-  const testWeatherEntity = WeatherEntity(
-    cityName: 'New York',
-    main: 'Clear',
-    description: 'clear sky',
-    iconCode: '01n',
-    temperature: 292.87,
-    pressure: 1012,
-    humidity: 70,
-  );
-
-  const testCityName = 'New York';
 
   group('get current weather', () {
     test('should return current weather a call to data source is successful',
